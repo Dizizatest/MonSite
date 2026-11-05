@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon site</title>
+  <meta name="description" content="Mon premier site, hébergé sur GitHub Pages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fond: #f3f6fa;
+      --surface: #e6edf7;
+      --texte: #14213d;
+      --discret: #51627c;
+      --accent: #2f5bea;
+      --sur-accent: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fond: #0f1726;
+        --surface: #19243a;
+        --texte: #e8eefb;
+        --discret: #9aabc6;
+        --accent: #7c9cff;
+        --sur-accent: #0f1726;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .conteneur { max-width: 44rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    header { padding: 1.5rem 0; }
+    header .conteneur { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .logo { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; text-decoration: none; color: var(--texte); }
+    nav { display: flex; gap: 1.25rem; }
+    nav a { color: var(--discret); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    .intro { padding: 5rem 0 4rem; }
+    h1 {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 9vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 1.25rem;
+    }
+    .intro p { font-size: 1.2rem; color: var(--discret); max-width: 36rem; margin: 0 0 2rem; }
+    .bouton {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--sur-accent);
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .bouton:hover { filter: brightness(1.1); }
+
+    section { padding: 3rem 0; scroll-margin-top: 1rem; }
+    h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.75rem; margin: 0 0 1rem; }
+    .encadre { background: var(--surface); border-radius: 0.75rem; padding: 1.5rem; }
+
+    footer { padding: 2.5rem 0; color: var(--discret); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="conteneur">
+      <a class="logo" href="#">Mon site</a>
+      <nav aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <div class="conteneur">
+        <h1>Bonjour, bienvenue sur mon site.</h1>
+        <p>Cette page est le point de départ. Remplace ce texte par une phrase qui explique ce que les visiteurs trouveront ici.</p>
+        <a class="bouton" href="#contact">Me contacter</a>
+      </div>
+    </div>
+
+    <section id="apropos">
+      <div class="conteneur">
+        <h2>À propos</h2>
+        <div class="encadre">
+          <p>Présente-toi ou présente ton projet en quelques lignes : qui tu es, ce que tu fais, et pourquoi ce site existe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="conteneur">
+        <h2>Contact</h2>
+        <p>Écris-moi à <a href="mailto:ton@email.com">ton@email.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="conteneur">© 2026 Mon site</div>
+  </footer>
+</body>
+</html>
